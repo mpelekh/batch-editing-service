@@ -1,5 +1,6 @@
 const Joi = require('joi');
 
+/** Schema of a buth request. */
 const batchRequest = {
 	body: {
 		endpoint: {

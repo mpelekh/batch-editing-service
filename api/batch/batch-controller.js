@@ -1,7 +1,16 @@
 const Utils = require("../../utils");
 const requester = require('../../common/requester');
 
+/** Class representing a controller for /batch route. */
 class BatchController {
+	
+	/**
+	 * Handler for POST methods
+	 * 
+	 * @param {object} req 
+	 * @param {object} res 
+	 * @param {Function} next 
+	 */
 	static async postHandler(req, res, next) {
 		const { body: { endpoint, payloads, requestBody: commonRequestBody = {} } } = req;
 
@@ -44,6 +53,7 @@ class BatchController {
 			next(error);
 		}
 	}
+
 }
 
 module.exports = BatchController;
