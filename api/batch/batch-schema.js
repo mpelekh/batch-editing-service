@@ -4,7 +4,7 @@ const Joi = require('joi');
 const batchRequest = {
 	body: {
 		endpoint: {
-			verb: Joi.any().only('GET', 'POST', 'PUT', 'DELETE').required(),
+			verb: Joi.any().only('GET', 'POST', 'PUT', 'PATCH', 'DELETE').required(),
 			url: Joi.string().required()
 		},
 		payloads: Joi.array().required(),

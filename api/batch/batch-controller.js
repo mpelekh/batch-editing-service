@@ -5,7 +5,7 @@ const requester = require('../../common/requester');
 class BatchController {
 	
 	/**
-	 * Handler for POST methods
+	 * Handler for the POST method
 	 * 
 	 * @param {object} req 
 	 * @param {object} res 
