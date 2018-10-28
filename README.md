@@ -15,7 +15,7 @@ Request example:
    "payloads": [
       {
          "parameters": {
-            "userId": ja2S-hs81-ksn3-iQI9
+            "userId": "ja2S-hs81-ksn3-iQI9"
          },
          "requestBody": {
             "age": 30
@@ -23,7 +23,7 @@ Request example:
       },
       {
          "parameters": {
-            "userId": 2
+            "userId": "ja2S-hs81-ksn3-iQI0"
          },
          "requestBody": {
             "age": 45
@@ -38,7 +38,7 @@ Response example:
 ```json
 [
     {
-        "url": "https://guesty-user-service.herokuapp.com/user/1",
+        "url": "https://guesty-user-service.herokuapp.com/user/ja2S-hs81-ksn3-iQI9",
         "verb": "PUT",
         "status": 200,
         "responseBody": {
@@ -49,7 +49,7 @@ Response example:
         }
     },
     {
-        "url": "https://guesty-user-service.herokuapp.com/user/2",
+        "url": "https://guesty-user-service.herokuapp.com/user/ja2S-hs81-ksn3-iQI0",
         "verb": "PUT",
         "status": 503,
         "requestBody": {
@@ -71,3 +71,5 @@ All existing services have Rate Limits. The new Batch Editing service takes it i
 2. Run `npm install` to install dependencies
 3. Run `npm start` to start server on port 3000.
 4. Make a POST request to `http://localhost:3000/batch` with a payload similar to the foregoing example.
+
+**Note:** Node.js version >= 9
