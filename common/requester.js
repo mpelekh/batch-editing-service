@@ -1,5 +1,6 @@
 const request = require('request-promise');
 const Bottleneck = require('bottleneck');
+const config = require('../config');
 const Utils = require('../utils');
 
 // Symbols which are used for private fields / methods
@@ -30,7 +31,7 @@ class Requester {
 			// since it has the ability to define min time how long to wait after launching a job before launching another one.
 			// In our case job is a HTTP request.
 			scheduler = new Bottleneck({
-				minTime: 2000
+				minTime: config.minTimePerRequest
 			});
 
 			this[_requestSchedulersByKey].set(key, scheduler);
