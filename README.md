@@ -59,7 +59,7 @@ Response example:
 ]
 ```
 
-Also the `requestBody` could be defined in the request object and consists common fields. It will be merged with each `requestBody` within payloads.
+Also, the `requestBody` could be defined in the request object and consists of common fields. It will be merged with each `requestBody` within payloads.
 
 Some of the calls may fail. In such cases, the Batch Editing service retries calling the function again (only perform 1 retry). If the service failed twice, the response indicates this invocation has failed.
 
