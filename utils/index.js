@@ -1,3 +1,5 @@
+const parse = require('url-parse');
+
 class Utils {
 	static updateUrl(url = '', parameters = {}) {
 		Object.keys(parameters).forEach(parameter => {
@@ -5,6 +7,10 @@ class Utils {
 		});
 
 		return url;
+	}
+
+	static parseUrl(url = '') {
+		return parse(url);
 	}
 }
 

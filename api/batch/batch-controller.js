@@ -1,5 +1,5 @@
 const Utils = require("../../utils");
-const requestSheduler = require('../../common/request-scheduler');
+const requester = require('../../common/requester');
 
 class BatchController {
 	static async postHandler(req, res, next) {
@@ -16,11 +16,11 @@ class BatchController {
 						...requestBody
 					}
 				};
-	
-				return requestSheduler
+
+				return requester
 					.sendRequest(options)
 					// Retry one more time if the error has occurred
-					.catch(() => requestSheduler.sendRequest(options))
+					.catch(() => requester.sendRequest(options))
 					.then(response => {
 						return {
 							url,
